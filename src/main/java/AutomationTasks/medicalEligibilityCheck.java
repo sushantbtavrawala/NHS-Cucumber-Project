@@ -68,7 +68,7 @@ public class medicalEligibilityCheck extends DriverInitiate {
         WebDriverWait wait = new WebDriverWait(driver, 50);//Wait Function Use
         WebElement wait2 = wait.until(ExpectedConditions.elementToBeClickable(next_Button));
 
-        if (option.equalsIgnoreCase("yes")) {
+        if (option.equalsIgnoreCase("Yes")) {
             find(yes_Radio_Button).click();
         } else {
             find(no_Radio_Button).click();

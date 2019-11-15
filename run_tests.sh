@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mvn test -Dtest=RunnerClass
+mvn clean install test -Dtest=RunnerClass

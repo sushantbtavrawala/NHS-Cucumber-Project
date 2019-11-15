@@ -28,19 +28,19 @@ public class walesMedicalCheckEligibility {
             medicalEligibilityCheck.click_Next_Button();
             medicalEligibilityCheck.select_Option(data.get("Partner"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("benefits");
+            medicalEligibilityCheck.select_Option(data.get("benefits"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("pregnant");
+            medicalEligibilityCheck.select_Option(data.get("pregnant"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("injury");
+            medicalEligibilityCheck.select_Option(data.get("injury"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("diabetes");
+            medicalEligibilityCheck.select_Option(data.get("diabetes"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("glaucoma");
+            medicalEligibilityCheck.select_Option(data.get("glaucoma"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("carehome");
+            medicalEligibilityCheck.select_Option(data.get("carehome"));
             medicalEligibilityCheck.click_Next_Button();
-            medicalEligibilityCheck.select_Option("savings");
+            medicalEligibilityCheck.select_Option(data.get("savings"));
             medicalEligibilityCheck.click_Next_Button();
         }
     }
