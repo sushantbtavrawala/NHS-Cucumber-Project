@@ -9,11 +9,11 @@ public class Hooks extends DriverInitiate {
     @Before
     public void startup() {
         driver.manage().deleteAllCookies();
-      //  driver.manage().window().fullscreen();
+        //  driver.manage().window().fullscreen();
     }
 
     @After
     public void afterScenario() {
-       // driver.quit();
+       driver.quit();
     }
 }
