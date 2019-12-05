@@ -48,7 +48,7 @@ public class medicalEligibilityCheck extends DriverInitiate {
     //Country selection page
     public static void click_Wales_Radio_Button() throws IOException {
         find(wales_Button).click();
-        CaptureScreenshot.Screenshot(driver,"Screenshot:");
+        //CaptureScreenshot.Screenshot(driver,"Screenshot:");
     }
 
     //Date of Birth Page
