@@ -36,7 +36,6 @@ public class medicalEligibilityCheck extends DriverInitiate {
     //Common button locators
     public static void navigate_To_URL() throws IOException {
         driver.get(url);
-        CaptureScreenshot.Screenshot(driver,"Screenshot:");
     }
 
     public static void click_Start_Button() {
@@ -73,11 +72,9 @@ public class medicalEligibilityCheck extends DriverInitiate {
         } else {
             find(no_Radio_Button).click();
         }
-        CaptureScreenshot.Screenshot(driver,"screenShot");
     }
 
     public static void verify_ResultPage() throws IOException {
          Assert.assertEquals(driver.getTitle(), expected_Page_Title);
-         CaptureScreenshot.Screenshot(driver,"screenShot");
     }
 }

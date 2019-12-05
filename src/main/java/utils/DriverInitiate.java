@@ -13,7 +13,6 @@ public abstract class DriverInitiate {
     public static WebDriver getDriver() {
         if (driver == null) {
             driver = BrowserFactory.apply();
-
         }
 
         return driver;
