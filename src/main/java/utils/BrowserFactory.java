@@ -11,7 +11,7 @@ public class BrowserFactory extends BrowserConstants {
     protected static WebDriver apply() {
         String browser = System.getProperty("browser");
         int chosenBrowser;
-        if (browser == null) { chosenBrowser = CHROME; } else {
+        if (browser == null) { chosenBrowser = HEADLESSCHROME; } else {
             chosenBrowser = convert(browser);
         }
         String os = System.getProperty("os.name").substring(0,3).toLowerCase();
