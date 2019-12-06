@@ -111,13 +111,13 @@
                 <artifactId>cluecumber-report-plugin</artifactId>
                 <version>${cluecumber-report-plugin}</version>
                 <executions>
-                    <execution>
+                <execution>
                         <id>report</id>
                         <phase>post-integration-test</phase>
                         <goals>
-                            <goal>reporting</goal>
+                        <goal>reporting</goal>
                         </goals>
-                    </execution>
+                </execution>
                 </executions>
                 <configuration>
                     <sourceJsonReportDirectory>${project.build.directory}/cucumber-report</sourceJsonReportDirectory>
