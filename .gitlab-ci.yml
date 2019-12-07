@@ -1,5 +1,5 @@
 NHS_Job_1: 
+  tags: 
+    - CI
   script: 
     - "echo Hello World"
-  tags: 
-    - ci
