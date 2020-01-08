@@ -2,4 +2,4 @@ NHS_Job_1:
   tags: 
     - NHS
   script: 
-    - ./sushant.sh
+    - echo hello world
