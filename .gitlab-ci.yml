@@ -2,4 +2,5 @@ NHS_Job_1:
   tags: 
     - NHS
   script: 
-    - ./run_tests.sh
+    - mvn clean install test -Dtest=RunnerClass
+    - mvn cluecumber-report:reporting
