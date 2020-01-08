@@ -3,4 +3,3 @@ NHS_Job_1:
     - NHS
   script: 
     - mvn clean install test -Dtest=RunnerClass
-    - mvn cluecumber-report:reporting
