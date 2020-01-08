@@ -2,4 +2,4 @@ NHS_Job_1:
      tags:
        - ci
      script:
-       - sh "echo hello"
+       - echo "hello"
