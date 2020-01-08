@@ -2,4 +2,4 @@ NHS_Job_1:
   tags: 
     - CI
   script: 
-    - "echo Hello World"
+    - ./run_tests.sh
