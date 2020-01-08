@@ -1,3 +1,4 @@
+image: maven:latest
 NHS_Job_1:
      script:
        - ./run_tests.sh
