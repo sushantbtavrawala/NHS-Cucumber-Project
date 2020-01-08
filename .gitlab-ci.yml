@@ -1,3 +1,3 @@
 NHS_Job_1:
      script:
-       - echo hello
+       - mvn clean install test -Dtest=RunnerClass
