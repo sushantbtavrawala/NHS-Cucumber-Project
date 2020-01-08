@@ -2,4 +2,4 @@ NHS_Job_1:
   tags: 
     - NHS
   script: 
-    - mvn clean install test -Dtest=RunnerClass
+    - echo "Trial Run" 
