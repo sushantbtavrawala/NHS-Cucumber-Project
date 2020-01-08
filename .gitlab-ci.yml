@@ -1,5 +1,5 @@
 NHS_Job_1: 
   tags: 
-    - CI
+    - NHS
   script: 
     - ./run_tests.sh
