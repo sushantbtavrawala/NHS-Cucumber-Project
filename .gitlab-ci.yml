@@ -2,11 +2,11 @@ image: maven:latest
 stages:
      - build
      - test
-
+     
 build:     
      stage: build
      script:
-       - maven image build
+       - echo Maven image pulled
 test:
      stage: test
      script:
