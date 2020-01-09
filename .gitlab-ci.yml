@@ -10,4 +10,4 @@ build:
 test:
      stage: test
      script:
-       - ./run_tests.sh
+       - mvn clean install test -Dtest=RunnerClass
