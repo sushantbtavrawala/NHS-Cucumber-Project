@@ -45,11 +45,19 @@ test:
     # Copy SFT AT
     - cp -R * /code
     - cd /code
+
+
+
+    - sudo cp -f /code/src/main/java/utils/drivers/mac/chromedriverheadless /usr/local/bin/chromedriver
+    - sudo chown root:root /usr/local/bin/chromedriver
+    - sudo chmod 0755 /usr/local/bin/chromedriver
+
+    - sudo mv -f /code/src/main/java/utils/drivers/mac/selenium-server-standalone.jar /usr/local/bin/
+    - sudo chown root:root /usr/local/bin/selenium-server-standalone.jar
+    - sudo chmod 0755 /usr/local/bin/selenium-server-standalone.jar
+
+
     - mvn clean install test -Dtest=RunnerClass
-
-
-
-
 
 
 
