@@ -4,7 +4,6 @@ stages:
      
 image: maven:latest
 
-NHS_Job_1:
 build:     
      stage: build
      script:
