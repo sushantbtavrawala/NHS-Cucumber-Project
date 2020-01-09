@@ -1,4 +1,5 @@
 image: maven:latest
+image: openjdk:latest
 stages:
      - build
      - test
