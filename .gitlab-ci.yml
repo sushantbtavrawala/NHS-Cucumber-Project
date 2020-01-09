@@ -6,7 +6,7 @@ stages:
 build:     
      stage: build
      script:
-       - echo Maven image pulled
+       - echo Maven pulled
 test:
      stage: test
      script:
