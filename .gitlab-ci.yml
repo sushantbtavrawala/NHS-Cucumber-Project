@@ -1,4 +1,15 @@
+stages:
+     - build
+     - test
+     
 image: maven:latest
+
 NHS_Job_1:
+build:     
+     stage: build
+     script:
+       - maven image build
+test:
+     stage: test
      script:
        - ./run_tests.sh
