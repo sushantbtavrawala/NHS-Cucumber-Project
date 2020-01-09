@@ -11,7 +11,7 @@ public class BrowserFactory extends BrowserConstants {
     protected static WebDriver apply() {
         String browser = System.getProperty("browser");
         int chosenBrowser;
-        if (browser == null) { chosenBrowser = HEADLESSCHROME; } else {
+        if (browser == null) { chosenBrowser = CHROME; } else {
             chosenBrowser = convert(browser);
         }
         String os = System.getProperty("os.name").substring(0,3).toLowerCase();
@@ -23,7 +23,7 @@ public class BrowserFactory extends BrowserConstants {
                 System.setProperty("webdriver.chrome.driver", "src/main/java/utils/drivers/" + os + "/chromedriver");
                 return new ChromeDriver();
             case HEADLESSCHROME:
-                System.setProperty("webdriver.chrome.driver", "src/main/java/utils/drivers/" + os + "/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/java/utils/drivers/" + os + "/chromedriverheadless");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--headless");
                 return new ChromeDriver(chromeOptions);

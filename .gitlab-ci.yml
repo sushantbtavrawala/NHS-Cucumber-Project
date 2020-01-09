@@ -1,5 +1,60 @@
-NHS_Job_1: 
-  script: 
-    - "echo Hello World"
-  tags: 
-    - ci
+.only-branches: &only-branches
+  except:
+    - master
+    - develop
+    - tags
+    - triggers
+.not-branches: &not-branches
+  only:
+    - master
+    - develop
+    - tags
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository -DskipDwpLegacy=true"
+cache:
+  paths:
+    - .m2/repository/
+image: $CI_REGISTRY/integration/provisioning/openjdk-maven:openjdk8-maven3.5.3
+stages:
+  - AT-tests
+  - report
+  - compliance
+  - code-quality
+test:
+  stage: AT-tests
+  tags:
+    - transparent
+  image: centos:7
+  script:
+    # Install dependancies
+    - yum install maven -y
+    - yum install gnupg2 -y
+    - yum install sudo -y
+    - yum install awscli -y
+    - yum install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm -y
+    - yum install Xvfb -y
+    # Install dependencies.
+    - yum update -y
+    - yum install unzip -y
+    - yum install -y google-chrome-stable -y
+    # Create axwaygsi user
+    - useradd -m test-user -p password
+    # Create folder to copy project
+    - mkdir -p "/code"
+    - chmod 777 /code
+    # Set ownerships
+    - chown -R test-user:root /code
+    # Copy SFT AT
+    - cp -R * /code
+    - cd /code
+    - mvn clean install test -Dtest=RunnerClass
+
+
+
+
+
+
+
+
+
+
