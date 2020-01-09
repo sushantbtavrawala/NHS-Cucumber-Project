@@ -22,8 +22,6 @@ stages:
   - code-quality
 test:
   stage: AT-tests
-  tags:
-    - transparent
   image: centos:7
   script:
     # Install dependancies
