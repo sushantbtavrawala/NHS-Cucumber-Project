@@ -1,6 +1,6 @@
 Feature: 01. Wales medical check eligibility journey
 
-  As a person from Wales
+  As a person from Wales,
   I need to know what help I can get with my NHS costs
   So that I can get the treatment I need
 
